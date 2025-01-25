@@ -15,7 +15,7 @@ public class DataLoader {
     private final VectorStore vectorStore;
     private final JdbcClient jdbcClient;
 
-    @Value("classpath:/xyz.pdf")
+    @Value("classpath:/cyient_conall.pdf")
     private Resource pdfResource;
 
     public DataLoader(VectorStore vectorStore, JdbcClient jdbcClient) {

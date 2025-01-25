@@ -51,7 +51,7 @@ public class RagController {
     }
 
     private String findSimilarResult(String question) {
-        List<Document> docs = vectorStore.similaritySearch(SearchRequest.query(question).withTopK(7));
+        List<Document> docs = vectorStore.similaritySearch(SearchRequest.builder().query(question).topK(5).build());
         return docs.stream().map(doc -> doc.getContent().toString()).collect(Collectors.joining());
     }
 }
